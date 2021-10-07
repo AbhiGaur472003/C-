@@ -5,9 +5,10 @@ int main(){
     float b=45.89;
     char c='A';
     bool d=true;
+    long e=234;
     short f=2;
     double g=23.45;
-    long doble h=345.9876;
+    long double h=345.9876;
     wchar_t i='B';
     cout<<"Integer: "<<a<<endl;
     cout<<"Float: "<<b<<endl;
