@@ -8,9 +8,6 @@ class Number{
             this->n=m;
         }
         friend int operator < (Number &, Number &);
-        void print(){
-            cout<<this->n<<endl;
-        }
 };
 int operator < (Number &c1,Number &c2){
     return pow(c1.n,c2.n);
