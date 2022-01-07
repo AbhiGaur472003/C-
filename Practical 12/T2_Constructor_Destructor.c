@@ -3,8 +3,8 @@ using namespace std;
 class Base{
 public:
     int a1;
-    Base(){
-        a1=30;
+    Base(int x){
+        a1=x+30;
         cout<<"Calling Class Base constructor"<<endl;
     }
     ~Base(){
@@ -18,7 +18,7 @@ public:
 class Child:public Base{
 public:
     int b1;
-    Child(int x){
+    Child(int x):Base(x){
         b1=x+20;
         cout<<"Calling Class Child1 constructor"<<endl;
     }
@@ -45,26 +45,12 @@ public:
         cout<<"Class SubChild variable value: "<<c1<<endl;
     }
 };
-class SubSubChild:public SubChild{
-public:
-    int d1;
-    SubSubChild(int x): SubChild(x){
-        d1=x;
-        cout<<"Calling Class SubSubChild constructor"<<endl;
-    }
-    ~SubSubChild(){
-        cout<<"Calling Class SubSubChild destructor"<<endl;
-    }
-    void Display4(){
-        Display3();
-        cout<<"Class SubSubChild variable value: "<<d1<<endl;
-    }
-};
+
 int main(){
     cout<<"Flow of constructor: "<<endl;
-    SubSubChild obj(48);
+    SubChild obj(48);
     cout<<endl;
-    obj.Display4();
+    obj.Display3();
     cout<<endl;
     cout<<"Flow of destructor: "<<endl;
     return 0;
