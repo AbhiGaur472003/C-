@@ -22,8 +22,8 @@ public:
 int main(){
     Base b;
     Child a;
-    cout<<"Addition is: "<<b.add(2,3)<<endl;
-    cout<<"Addition is: "<<b.add(2.4f,4.5f)<<endl;
-    cout<<"Addition is: "<<a.add(5,7)<<endl;
-    cout<<"Addition is: "<<a.add(4.5f,6.7f)<<endl;
+    cout<<"Calling from Base class: "<<"Addition is(2,3): "<<b.add(2,3)<<endl;
+    cout<<"Calling from Base class: "<<"Addition is(2.4f,4.5f): "<<b.add(2.4f,4.5f)<<endl;
+    cout<<"Calling from Child class: "<<"Addition is(5,7): "<<a.add(5,7)<<endl;
+    cout<<"Calling from Child class: "<<"Addition is(4.5f,6.7f): "<<a.add(4.5f,6.7f)<<endl;
 }
