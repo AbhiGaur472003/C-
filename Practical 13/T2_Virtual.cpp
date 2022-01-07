@@ -6,7 +6,7 @@ public:
         cout<<"Calling Base Class"<<" :";
         return a+b;
     }
-    virtual multi(int a,int b)=0;
+    virtual int multi(int a,int b)=0;
 };
 class Child:public Base{
 public:
@@ -23,6 +23,6 @@ int main(){
     Child b;
     Base *a;
     a=&b;
-    cout<<"Addition : "<<a->add(3,4)<<endl;
-    cout<<"Multiplication : "<<a->multi(3,6)<<endl;
+    cout<<"Calling from Base Class pointer"<<"Addition : "<<a->add(3,4)<<endl;
+    cout<<"Calling from Base Class pointer"<<"Multiplication : "<<a->multi(3,6)<<endl;
 }
